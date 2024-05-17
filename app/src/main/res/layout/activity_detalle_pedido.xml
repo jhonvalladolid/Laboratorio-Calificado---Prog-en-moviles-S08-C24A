@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DetallePedido">
+
+    <!-- Título "Pedido" -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pedido"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Detalles del pedido en LinearLayouts horizontales -->
+    <LinearLayout
+        android:id="@+id/llCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_cliente"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNumeroCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/telef"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvNumeroCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numero_cliente"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProductos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llNumeroCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/prod"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvProductos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/productos"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llUbicacion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llProductos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ubic"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ubicacion"/>
+
+    </LinearLayout>
+
+    <!-- Botones de acciones -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btnCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/call"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            app:layout_constraintWidth_percent="0.3"
+            android:layout_marginHorizontal="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnWhatsApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/wsp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            app:layout_constraintWidth_percent="0.3"
+            android:layout_marginHorizontal="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnMaps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/maps"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            app:layout_constraintWidth_percent="0.3"
+            android:layout_marginHorizontal="20dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
